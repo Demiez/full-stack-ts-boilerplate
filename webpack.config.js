@@ -2,7 +2,8 @@ const path = require('path'),
   webpack = require('webpack'),
   HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
+const clientConfig = {
+  mode: process.env.NODE_ENV || 'development',
   entry: {
     app: ['./client/app/App.tsx'],
     vendor: ['react', 'react-dom'],
@@ -35,3 +36,34 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
   ],
 };
+
+const serverConfig = {
+  mode: process.env.NODE_ENV || 'development',
+  entry: './server/server.ts',
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        loader: 'ts-loader',
+        exclude: /node_modules/,
+        options: {
+          configFile: 'tsconfig.server.json',
+        },
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
+  output: {
+    filename: 'server.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  devtool: 'eval-source-map',
+  target: 'node',
+  node: {
+    __dirname: false,
+  },
+};
+
+module.exports = [clientConfig, serverConfig];
