@@ -4,7 +4,7 @@ const path = require('path'),
 
 module.exports = {
   entry: {
-    app: ['./src/app/App.tsx'],
+    app: ['./client/app/App.tsx'],
     vendor: ['react', 'react-dom'],
   },
   output: {
@@ -20,14 +20,17 @@ module.exports = {
       {
         test: /\.(ts|tsx)$/,
         loader: 'ts-loader',
+        options: {
+          configFile: 'tsconfig.client.json',
+        },
       },
       { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'src', 'app', 'index.html'),
-      favicon: './src/assets/images/favicon.ico',
+      template: path.resolve(__dirname, 'client', 'app', 'index.html'),
+      favicon: './client/assets/images/favicon.ico',
     }),
     new webpack.HotModuleReplacementPlugin(),
   ],

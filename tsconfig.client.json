@@ -11,6 +11,6 @@
     "jsx": "react",
     "lib": ["dom", "dom.iterable", "esnext", "es5"]
   },
-  "include": ["./src/**/**/*"],
+  "include": ["./client/**/**/*"],
   "exclude": ["node_modules"]
 }
