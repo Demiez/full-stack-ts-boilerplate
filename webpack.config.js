@@ -64,6 +64,11 @@ const serverConfig = {
   node: {
     __dirname: false,
   },
+  plugins: [
+    new webpack.SourceMapDevToolPlugin({
+      filename: '[name].js.map',
+    }),
+  ],
 };
 
 module.exports = [clientConfig, serverConfig];
