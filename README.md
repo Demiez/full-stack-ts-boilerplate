@@ -5,3 +5,7 @@
 - yarn install
 - yarn start
 - Install Debug for Chrome (Ctrl+Shift+X) and in Debug start "Launch Chrome against localhost"
+
+##### For Linting
+
+- yarn add -D tslint tslint-config-prettier tslint-react
