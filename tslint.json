@@ -22,7 +22,6 @@
     "jsdoc-format": false,
     "no-string-literal": false,
     "no-empty-interface": false,
-    "semicolon": [true, "always", "ignore-bound-class-methods"],
     "object-literal-key-quotes": false
   },
   "linterOptions": {
