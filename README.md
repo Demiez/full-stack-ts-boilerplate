@@ -9,3 +9,7 @@
 ##### For Linting
 
 - yarn add -D tslint tslint-config-prettier tslint-react
+
+##### For Unit Tests
+
+- yarn add -D ts-node mocha chai chai-http @types/mocha @types/chai-http @types/chai
