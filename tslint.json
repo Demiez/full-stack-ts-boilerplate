@@ -2,8 +2,8 @@
   "defaultSeverity": "error",
   "extends": [
     "tslint:recommended",
-    "tslint-react",
-    "tslint-config-prettier"
+    "tslint-config-prettier",
+    "tslint-react"
   ],
   "rules": {
     "variable-name": [true, "allow-snake-case", "allow-pascal-case", "allow-leading-underscore"],
