@@ -1,4 +1,4 @@
-### React TypeScript WebPack Boilerplate without CRA
+### React (w/o CRA) TypeScript WebPack Express Boilerplate
 
 #### Versions: React (17.0.1), Typescript (4.1.3), Webpack (4.27.1)
 

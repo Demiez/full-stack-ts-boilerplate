@@ -30,7 +30,7 @@ describe(':: baseRoute', () => {
       .get('/index')
       .catch((err) => {
         if (err.response) {
-          return err.response;
+          return err.response as Response;
         } else {
           throw err;
         }
